@@ -1,24 +1,19 @@
-// Priyanka Kulkarni
-// 8/16/2024
-// CSE 123
-// P3: JoeFeed Quiz
-// TAs: Sahej Kocchar and Nicole Wang
 import java.util.*;
 import java.io.*;
 
-// This class creates a BuzzFeed like quiz called a JoeFeed Quiz. It allows you to take
+// This class creates a BuzzFeed like quiz called a BuzzFeed Quiz. It allows you to take
 // the quiz, add questions to it, and export it to an external file.
 public class QuizTree {
     private QuizTreeNode overallRoot;
 
-    // This constructor establishes a JoeFeed quiz. It takes inputFile (the quiz) as 
+    // This constructor establishes a BuzzFeed quiz. It takes inputFile (the quiz) as 
     // a parameter
     public QuizTree(Scanner inputFile) {
         this.overallRoot = makeTree(inputFile);
     }
 
     // Behavior:
-    //  - This method creates a JoeFeed quiz
+    //  - This method creates a BuzzFeed quiz
     // Returns:
     //  - QuizTreeNode: the final quiz
     // Parameters:
@@ -82,19 +77,19 @@ public class QuizTree {
     }
 
     // Behavior:
-    //  - This method exports the JoeFeed quiz to an external file
+    //  - This method exports the quiz to an external file
     // Returns:
-    //  - PrintStream: the exported JoeFeed quiz
+    //  - PrintStream: the exported quiz
     // Parameters:
-    //  - outputFile: the name of the file the JoeFeed quiz is being exported to
+    //  - outputFile: the name of the file the quiz is being exported to
     public PrintStream export(PrintStream outputFile) {
         return export(outputFile, overallRoot);
     }
 
     // Behavior:
-    //  - This method exports the JoeFeed quiz to an external file
+    //  - This method exports the quiz to an external file
     // Returns:
-    //  - PrintStream: the exported JoeFeed quiz
+    //  - PrintStream: the exported quiz
     // Parameters:
     //  - outputFile: the name of the file the JoeFeed quiz is being exported to
     //  - node: the established quiz tree 
@@ -111,7 +106,7 @@ public class QuizTree {
     }
 
     // Behavior:
-    //  - This method allows you to replace an answer to the JoeFeed quiz with a new
+    //  - This method allows you to replace an answer to the quiz with a new
     //    question
     // Parameters:
     //  - toReplace: the answer you'd like to replace with a new question
@@ -130,7 +125,7 @@ public class QuizTree {
     }
 
     // Behavior:
-    //  - This method allows you to replace an answer to the JoeFeed quiz with a new
+    //  - This method allows you to replace an answer to the quiz with a new
     //    question
     // Parameters:
     //  - toReplace: the answer you'd like to replace with a new question
@@ -152,7 +147,7 @@ public class QuizTree {
 
     }
 
-    // This class establishes a QuizTreeNode- a place where JoeFeed questions can be housed
+    // This class establishes a QuizTreeNode- a place where questions can be housed
     public static class QuizTreeNode {
         public String data;
         public QuizTreeNode left;
